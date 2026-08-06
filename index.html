@@ -15,18 +15,26 @@
           Enter the temperature, select units and submit
         </p>
         <section class="converter-input">
-          <input type="text" name="temperature" id="temperature" />
+          <input
+            type="number"
+            name="temperature"
+            id="temperature"
+            step="0.01"
+            value="0.00"
+          />
           <select name="from-unit" id="from-unit">
+            <option value="" disabled selected hidden>From Unit</option>
             <option value="fahrenheit">Fahrenheit</option>
             <option value="celsius">Celsius</option>
             <option value="kelvin">Kelvin</option>
           </select>
           <select name="to-unit" id="to-unit">
+            <option value="" disabled selected class hidden>To Unit</option>
             <option value="fahrenheit">Fahrenheit</option>
             <option value="celsius">Celsius</option>
             <option value="kelvin">Kelvin</option>
           </select>
-          <button class="submit">Convert</button>
+          <button class="submit" disabled>Convert</button>
         </section>
         <p class="result"></p>
       </article>
